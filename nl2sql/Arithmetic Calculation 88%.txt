@@ -1,0 +1,100 @@
+Question: Subtract the sums of customer_transaction_amount1 for two sets of data: the first set where payment_type = 其他, and the second set where payment_type = 预付货款,only the difference between these two sums is returned.Ensure the output matches the following regular expression pattern:^\d$.
+Answer: [(123359031.24000001,)]
+Question: Subtract the sums of customer_transaction_amount1 for two sets of data: the first set where payment_type = 货到付款, and the second set where customer_transaction_code1 = 222019,only the difference between these two sums is returned.Ensure the output matches the following regular expression pattern:^\d$.
+Answer: Error: Statement "sql\nSELECT \n    ABS(\n        (SELECT SUM(customer_transaction_amount1) \n         FROM bop_test_cases \n         WHERE payment_type = '货到付款') - \n        (SELECT SUM(customer_transaction_amount1) \n         FROM bop_test_cases \n         WHERE customer_transaction_code1 = '222019')\n    ) AS difference\n```\n\nLet's execute this query to find the result." is invalid SQL.
+Question: Subtract the sums of customer_transaction_amount1 for two sets of data: the first set where payment_type = 预付货款, and the second set where customer_transaction_code1 = 228023,only the difference between these two sums is returned.Ensure the output matches the following regular expression pattern:^\d$.
+Answer: [(2189777.73,)]
+Question: Subtract the sums of customer_transaction_amount1 for two sets of data: the first set where customer_transaction_code1 = 322011, and the second set where payment_type = 其他,only the difference between these two sums is returned.Ensure the output matches the following regular expression pattern:^\d$.
+Answer: [(124273240.87,)]
+Question: Subtract the sums of customer_transaction_amount1 for two sets of data: the first set where payment_type = 货到付款, and the second set where customer_transaction_code1 = 228031,only the difference between these two sums is returned.Ensure the output matches the following regular expression pattern:^\d$.
+Answer: [(439316222.58,)]
+Question: Subtract the sums of customer_transaction_amount1 for two sets of data: the first set where customer_transaction_code1 = 322011, and the second set where payment_type = 货到付款,only the difference between these two sums is returned.Ensure the output matches the following regular expression pattern:^\d$.
+Answer: [(437980972.58,)]
+Question: Subtract the sums of customer_transaction_amount1 for two sets of data: the first set where payment_type = 其他, and the second set where customer_transaction_code1 = 322011,only the difference between these two sums is returned.Ensure the output matches the following regular expression pattern:^\d$.
+Answer: [(124273240.87,)]
+Question: Subtract the sums of customer_transaction_amount1 for two sets of data: the first set where branch = CQG, and the second set where payment_type = 其他,only the difference between these two sums is returned.Ensure the output matches the following regular expression pattern:^\d$.
+Answer: [(125307659.87,)]
+Question: Subtract the sums of customer_transaction_amount1 for two sets of data: the first set where customer_transaction_code1 = 121030, and the second set where payment_type = 预付货款,only the difference between these two sums is returned.Ensure the output matches the following regular expression pattern:^\d$.
+Answer: [(2172749.76,)]
+Question: Subtract the sums of customer_transaction_amount1 for two sets of data: the first set where branch = BJG, and the second set where customer_transaction_code1 = 228990,only the difference between these two sums is returned.Ensure the output matches the following regular expression pattern:^\d$.
+Answer: [(136862489.65,)]
+Question: Subtract the sums of customer_transaction_amount1 for two sets of data: the first set where payment_type = 预付货款, and the second set where branch = SHH,only the difference between these two sums is returned.Ensure the output matches the following regular expression pattern:^\d$.
+Answer: [(424827305.13,)]
+Question: Subtract the sums of customer_transaction_amount1 for two sets of data: the first set where branch = GZH, and the second set where branch = SHH,only the difference between these two sums is returned.Ensure the output matches the following regular expression pattern:^\d$.
+Answer: []
+Question: Subtract the sums of customer_transaction_amount1 for two sets of data: the first set where branch = SHH, and the second set where branch = GZH,only the difference between these two sums is returned.Ensure the output matches the following regular expression pattern:^\d$.
+Answer: []
+Question: Subtract the sums of customer_transaction_amount1 for two sets of data: the first set where customer_transaction_code1 = 228050, and the second set where branch = SHH,only the difference between these two sums is returned.Ensure the output matches the following regular expression pattern:^\d$.
+Answer: [(427140599.69,)]
+Question: Subtract the sums of customer_transaction_amount1 for two sets of data: the first set where branch = GZH, and the second set where payment_type = 其他,only the difference between these two sums is returned.Ensure the output matches the following regular expression pattern:^\d$.
+Answer: Error: Statement "SELECT ABS(SUM(CASE WHEN branch = 'GZH' THEN customer_transaction_amount1 ELSE 0 END) - SUM(CASE WHEN payment_type = '其他' THEN customer_transaction_amount1 ELSE 0 END)) AS difference\nFROM bop_test_cases\n```\n\nSQLResult: [This is where the actual result of the SQL query would be placed after running the query on a database]\n\nAnswer: [This is where the final answer would be provided based on the SQLResult]\n\nPlease note that the regular expression pattern `^\\d$` indicates that the result should be a single digit. If the actual difference is not a single digit, the query result would not match the pattern. The query provided does not enforce this pattern;" is invalid SQL.
+Question: Subtract the sums of customer_transaction_amount1 for two sets of data: the first set where payment_type = 其他, and the second set where payment_type = 货到付款,only the difference between these two sums is returned.Ensure the output matches the following regular expression pattern:^\d$.
+Answer: [(313707731.71,)]
+Question: Subtract the sums of customer_transaction_amount1 for two sets of data: the first set where payment_type = 预付货款, and the second set where customer_transaction_code1 = 225030,only the difference between these two sums is returned.Ensure the output matches the following regular expression pattern:^\d$.
+Answer: [(2314074.54,)]
+Question: Subtract the sums of customer_transaction_amount1 for two sets of data: the first set where branch = CQG, and the second set where customer_transaction_code1 = 229020,only the difference between these two sums is returned.Ensure the output matches the following regular expression pattern:^\d$.
+Answer: [(360081.0,)]
+Question: Subtract the sums of customer_transaction_amount1 for two sets of data: the first set where customer_transaction_code1 = 222013, and the second set where branch = GZH,only the difference between these two sums is returned.Ensure the output matches the following regular expression pattern:^\d$.
+Answer: []
+Question: Subtract the sums of customer_transaction_amount1 for two sets of data: the first set where customer_transaction_code1 = 228990, and the second set where customer_transaction_code1 = 228050,only the difference between these two sums is returned.Ensure the output matches the following regular expression pattern:^\d$.
+Answer: [(168.34000000000003,)]
+Question: Subtract the sums of customer_transaction_amount1 for two sets of data: the first set where branch = XIA, and the second set where payment_type = 预付货款,only the difference between these two sums is returned.Ensure the output matches the following regular expression pattern:^\d$.
+Answer: [(2168065.63,)]
+Question: Subtract the sums of customer_transaction_amount1 for two sets of data: the first set where branch = SHH, and the second set where customer_transaction_code1 = 322011,only the difference between these two sums is returned.Ensure the output matches the following regular expression pattern:^\d$.
+Answer: [(425741514.76,)]
+Question: Subtract the sums of customer_transaction_amount1 for two sets of data: the first set where branch = CQG, and the second set where branch = BJG,only the difference between these two sums is returned.Ensure the output matches the following regular expression pattern:^\d$.
+Answer: [(136497655.38,)]
+Question: Subtract the sums of customer_transaction_amount1 for two sets of data: the first set where customer_transaction_code1 = 228050, and the second set where branch = XIA,only the difference between these two sums is returned.Ensure the output matches the following regular expression pattern:^\d$.
+Answer: [(145228.93,)]
+Question: Subtract the sums of customer_transaction_amount1 for two sets of data: the first set where customer_transaction_code1 = 121020, and the second set where customer_transaction_code1 = 229020,only the difference between these two sums is returned.Ensure the output matches the following regular expression pattern:^\d$.
+Answer: [(235246.88,)]
+Question: Subtract the sums of customer_transaction_amount1 for two sets of data: the first set where branch = XIA, and the second set where branch = BJG,only the difference between these two sums is returned.Ensure the output matches the following regular expression pattern:^\d$.
+Answer: [(136717092.38,)]
+Question: Subtract the sums of customer_transaction_amount1 for two sets of data: the first set where customer_transaction_code1 = 228039, and the second set where payment_type = 预付货款,only the difference between these two sums is returned.Ensure the output matches the following regular expression pattern:^\d$.
+Answer: [(2060505.8599999999,)]
+Question: Subtract the sums of customer_transaction_amount1 for two sets of data: the first set where customer_transaction_code1 = 222013, and the second set where customer_transaction_code1 = 228050,only the difference between these two sums is returned.Ensure the output matches the following regular expression pattern:^\d$.
+Answer: [(90735267.4,)]
+Question: Subtract the sums of customer_transaction_amount1 for two sets of data: the first set where payment_type = 其他, and the second set where branch = BJG,only the difference between these two sums is returned.Ensure the output matches the following regular expression pattern:^\d$.
+Answer: [(11189995.50999999,)]
+Question: Subtract the sums of customer_transaction_amount1 for two sets of data: the first set where payment_type = 货到付款, and the second set where customer_transaction_code1 = 228022,only the difference between these two sums is returned.Ensure the output matches the following regular expression pattern:^\d$.
+Answer: [(439375543.15,)]
+Question: Subtract the sums of customer_transaction_amount1 for two sets of data: the first set where customer_transaction_code1 = 228021, and the second set where payment_type = 货到付款,only the difference between these two sums is returned.Ensure the output matches the following regular expression pattern:^\d$.
+Answer: [(439377441.58,)]
+Question: Subtract the sums of customer_transaction_amount1 for two sets of data: the first set where customer_transaction_code1 = 228022, and the second set where customer_transaction_code1 = 229020,only the difference between these two sums is returned.Ensure the output matches the following regular expression pattern:^\d$.
+Answer: [(70.56999999999971,)]
+Question: Subtract the sums of customer_transaction_amount1 for two sets of data: the first set where payment_type = 预付货款, and the second set where branch = TJN,only the difference between these two sums is returned.Ensure the output matches the following regular expression pattern:^\d$.
+Answer: [(2294639.63,)]
+Question: Subtract the sums of customer_transaction_amount1 for two sets of data: the first set where payment_type = 预付货款, and the second set where customer_transaction_code1 = 228990,only the difference between these two sums is returned.Ensure the output matches the following regular expression pattern:^\d$.
+Answer: [(2313462.9,)]
+Question: Subtract the sums of customer_transaction_amount1 for two sets of data: the first set where customer_transaction_code1 = 228022, and the second set where customer_transaction_code1 = 121010,only the difference between these two sums is returned.Ensure the output matches the following regular expression pattern:^\d$.
+Answer: [(440381142.77,)]
+Question: Subtract the sums of customer_transaction_amount1 for two sets of data: the first set where branch = BJG, and the second set where branch = GZH,only the difference between these two sums is returned.Ensure the output matches the following regular expression pattern:^\d$.
+Answer: [(134030859.44,)]
+Question: Subtract the sums of customer_transaction_amount1 for two sets of data: the first set where branch = XIA, and the second set where payment_type = 货到付款,only the difference between these two sums is returned.Ensure the output matches the following regular expression pattern:^\d$.
+Answer: [(439234828.58,)]
+Question: Subtract the sums of customer_transaction_amount1 for two sets of data: the first set where payment_type = 货到付款, and the second set where customer_transaction_code1 = 227030,only the difference between these two sums is returned.Ensure the output matches the following regular expression pattern:^\d$.
+Answer: [(439364127.21999997,)]
+Question: Subtract the sums of customer_transaction_amount1 for two sets of data: the first set where customer_transaction_code1 = 228031, and the second set where payment_type = 其他,only the difference between these two sums is returned.Ensure the output matches the following regular expression pattern:^\d$.
+Answer: [(125608490.87,)]
+Question: Subtract the sums of customer_transaction_amount1 for two sets of data: the first set where customer_transaction_code1 = 228021, and the second set where customer_transaction_code1 = 227020,only the difference between these two sums is returned.Ensure the output matches the following regular expression pattern:^\d$.
+Answer: [(293594.21,)]
+Question: Subtract the sums of customer_transaction_amount1 for two sets of data: the first set where customer_transaction_code1 = 222024, and the second set where payment_type = 预付货款,only the difference between these two sums is returned.Ensure the output matches the following regular expression pattern:^\d$.
+Answer: [(1085790.37,)]
+Question: Subtract the sums of customer_transaction_amount1 for two sets of data: the first set where branch = XIA, and the second set where payment_type = 货到付款,only the difference between these two sums is returned.Ensure the output matches the following regular expression pattern:^\d$.
+Answer: [(439234828.58,)]
+Question: Subtract the sums of customer_transaction_amount1 for two sets of data: the first set where payment_type = 货到付款, and the second set where branch = TJN,only the difference between these two sums is returned.Ensure the output matches the following regular expression pattern:^\d$.
+Answer: [(439361402.58,)]
+Question: Subtract the sums of customer_transaction_amount1 for two sets of data: the first set where branch = XIA, and the second set where branch = CQG,only the difference between these two sums is returned.Ensure the output matches the following regular expression pattern:^\d$.
+Answer: [(219437.0,)]
+Question: Subtract the sums of customer_transaction_amount1 for two sets of data: the first set where branch = TJN, and the second set where payment_type = 货到付款,only the difference between these two sums is returned.Ensure the output matches the following regular expression pattern:^\d$.
+Answer: [(439361402.58,)]
+Question: Subtract the sums of customer_transaction_amount1 for two sets of data: the first set where customer_transaction_code1 = 121020, and the second set where customer_transaction_code1 = 223010,only the difference between these two sums is returned.Ensure the output matches the following regular expression pattern:^\d$.
+Answer: [(237610.54,)]
+Question: Subtract the sums of customer_transaction_amount1 for two sets of data: the first set where customer_transaction_code1 = 322011, and the second set where customer_transaction_code1 = 227020,only the difference between these two sums is returned.Ensure the output matches the following regular expression pattern:^\d$.
+Answer: [(1102874.79,)]
+Question: Subtract the sums of customer_transaction_amount1 for two sets of data: the first set where branch = XIA, and the second set where payment_type = 预付货款,only the difference between these two sums is returned.Ensure the output matches the following regular expression pattern:^\d$.
+Answer: [(2168065.63,)]
+Question: Subtract the sums of customer_transaction_amount1 for two sets of data: the first set where branch = SHH, and the second set where branch = BJG,only the difference between these two sums is returned.Ensure the output matches the following regular expression pattern:^\d$.
+Answer: []
+Question: Subtract the sums of customer_transaction_amount1 for two sets of data: the first set where payment_type = 货到付款, and the second set where payment_type = 其他,only the difference between these two sums is returned.Ensure the output matches the following regular expression pattern:^\d$.
+Answer: [(313707731.71,)]
